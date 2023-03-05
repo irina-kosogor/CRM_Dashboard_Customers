@@ -1,0 +1,10 @@
+@mixin before-icon {
+    content: "";
+    background: url('/icons/3d-cube.svg');
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 11px;
+}

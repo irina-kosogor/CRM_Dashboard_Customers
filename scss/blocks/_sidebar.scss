@@ -1,0 +1,187 @@
+.sidebar {
+    padding: 36px 28px 76px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    &__logo {
+        font-family: 'Poppins SemiBold';
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 39px;
+        position: relative;
+        padding-left: 45px;
+        margin-bottom: 64px;
+
+        &:before {
+            content: "";
+            background: url('/icons/dashboard_logo.svg');
+            position: absolute;
+            width: 37px;
+            height: 37px;
+            top: 0;
+            left: 0;
+        }
+
+        &:after {
+            content: "v.01";
+            position: absolute;
+            font-family: 'Poppins Medium', sans-serif;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 15px;
+            color: #838383;
+            top: 17px;
+            left: 196px;
+        }
+    }
+
+    &__nav-items {
+        color: $main-grey-color;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .sidebar__nav-title {
+        position: relative;
+        padding-left: 49px;
+
+        &:before {
+            @include before-icon;
+            background: url('/icons/key-square.svg');
+        }
+
+        &:hover {
+            &:before {
+                background: url('/icons/key-square-white.svg');
+            }
+        }
+
+        &:after {
+            background: none;
+        }
+    }
+
+    &__nav-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 250px;
+        height: 46px;
+        padding-left: 49px;
+
+        &:hover {
+            background: #5932EA;
+            border-radius: 8px;
+            color: #FFFFFF;
+            transition: all 1s;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: url('/icons/chevron-right.svg');
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            &:after {
+                background: url('/icons/chevron-right-white.svg');
+            }
+        }
+
+        &:before {
+            @include before-icon;
+        }
+
+        &_product:before {
+            background: url('/icons/3d-cube.svg');
+        }
+
+        &_product:hover {
+            &:before {
+                background: url('/icons/3d-cube-white.svg');
+            }
+        }
+
+        &_customers:before {
+            background: url('/icons/user-square.svg');
+        }
+
+        &_customers:hover {
+            &:before {
+                background: url('/icons/user-square-white.svg');
+            }
+        }
+
+        &_income:before {
+            background: url('/icons/wallet-money.svg');
+        }
+
+        &_income:hover {
+            &:before {
+                background: url('/icons/wallet-money-white.svg');
+            }
+        }
+
+        &_promote:before {
+            background: url('/icons/discount-shape.svg');
+        }
+
+        &_promote:hover {
+            &:before {
+                background: url('/icons/discount-shape-white.svg');
+            }
+        }
+
+        &_help:before {
+            background: url('/icons/message-question.svg');
+        }
+
+        &_help:hover {
+            &:before {
+                background: url('/icons/message-question-white.svg');
+            }
+        }
+    }
+
+    &__profile {
+        justify-self: flex-end;
+        display: flex;
+
+        &-image {
+            width: 42px;
+            height: 42px;
+            background: url('/img/evana_profile_oic.png') 100% 100% / cover no-repeat;
+        }
+
+        &-descr {
+            margin-left: 12px;
+        }
+
+        &-name {
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        &-position {
+            font-family: 'Poppins Regular', sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: $secondary-grey-color;
+        }
+    }
+}
